@@ -1,16 +1,19 @@
-function myFunction() {
-            var input, filter, ul, li, a, i, txtValue;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("myUL");
-            li = ul.getElementsByTagName("li");
-            for (i = 0; i < li.length; i++) {
-                a = li[i].getElementsByTagName("a")[0];
-                txtValue = a.textContent || a.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                } else {
-                    li[i].style.display = "none";
-                }
-            }
-        }
+document.addEventListener("DOMContentLoaded", function() {
+            const searchInput = document.getElementById("search");
+            const cards = document.querySelectorAll(".card");
+
+            searchInput.addEventListener("input", function() {
+                const searchTerm = searchInput.value.toLowerCase();
+
+                cards.forEach(card => {
+                    const cardText = card.textContent.toLowerCase();
+                    const dataFilter = card.getAttribute("data-filter");
+
+                    if (cardText.includes(searchTerm) || dataFilter.includes(searchTerm)) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            });
+        });
