@@ -8,7 +8,7 @@
     /* Adds a transition effect when the padding is decreased */
     position: fixed;
     /* Sticky/fixed navbar */
-    width: 99%;
+    width: 98%;
     top: 0;
     /* At the top */
     z-index: 99;
