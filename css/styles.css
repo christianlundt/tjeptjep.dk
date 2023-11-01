@@ -202,38 +202,6 @@ body {
 /* */
 /* */
 /* */
-/* #AD */
-/* */
-/* */
-
-/* Style for the ad container on the right side */
-
-.ad-container {
-    position: fixed;
-    top: 25%;
-    /* Adjust the top position as needed */
-    right: -3%;
-    /* Adjust the right position as needed */
-    width: 200px;
-    /* Adjust the width as needed */
-}
-
-.ad-container img {
-    max-width: 100%;
-}
-
-/* Add responsiveness - on screens less than 580px wide, display the ads differently */
-@media screen and (max-width: 580px) {
-    .ad-container {
-        z-index: 100000;
-        width: 100px;
-        /* Adjust the width for mobile phones */
-    }
-}
-
-/* */
-/* */
-/* */
 /* #Tags above images */
 /* */
 /* */
