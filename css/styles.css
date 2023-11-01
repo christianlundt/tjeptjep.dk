@@ -49,6 +49,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: calc(10% - 8px);
     width: calc(25% - 8px);
     /* Adjusted to reduce the gap between cards */
     margin-right: 3px;
@@ -67,9 +68,8 @@ body {
     /* Add a smooth transition for the hover effect */
     text-decoration: none;
     color: inherit;
-    position: relative;
-    overflow: hidden;
-    /* Ensure the cards maintain their aspect ratio */
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
@@ -119,7 +119,15 @@ body {
 }
 
 /* Add responsiveness - on screens less than 580px wide, display the cards differently */
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 1280px) {
+    .card {
+        width: calc(33.3% - 20px);
+        /* Adjusted to reduce the gap between cards */
+    }
+}
+
+/* Add responsiveness - on screens less than 580px wide, display the cards differently */
+@media screen and (max-width: 720px) {
     .card {
         width: calc(100% - 20px);
         /* Adjusted to reduce the gap between cards */
