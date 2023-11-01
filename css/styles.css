@@ -180,7 +180,7 @@ body {
     padding: 10px;
     width: 100%;
     max-width: 300px;
-    border: 1px solid #8FD24B;
+    border: 1px solid #f0f0f0;
     border-radius: 5px;
     font-size: 16px;
     text-align: right;
@@ -196,7 +196,7 @@ body {
 
 #search:focus {
     outline: none;
-    border-color: #8FD24B;
+    border-color: #3586ff;
 }
 
 /* */
