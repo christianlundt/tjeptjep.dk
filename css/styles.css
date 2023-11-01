@@ -67,6 +67,9 @@ body {
     /* Add a smooth transition for the hover effect */
     text-decoration: none;
     color: inherit;
+    position: relative;
+    overflow: hidden;
+    /* Ensure the cards maintain their aspect ratio */
 }
 
 .card:hover {
@@ -214,6 +217,7 @@ body {
 /* Add responsiveness - on screens less than 580px wide, display the ads differently */
 @media screen and (max-width: 580px) {
     .ad-container {
+        z-index: 100000;
         width: 100px;
         /* Adjust the width for mobile phones */
     }
