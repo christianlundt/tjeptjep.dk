@@ -160,6 +160,14 @@ body {
     align-items: center;
 }
 
+/* Add responsiveness - on screens less than 580px wide, display the cards differently */
+@media screen and (max-width: 580px) {
+    .header {
+        margin-top: 20%;
+        /* Adjusted to reduce the gap between cards */
+    }
+}
+
 /* */
 /* */
 /* */
