@@ -1,5 +1,5 @@
 // Load the footer content using JavaScript
-        fetch('../common/footer.html')
+        fetch('/common/footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;

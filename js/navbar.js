@@ -1,5 +1,5 @@
 // Load the footer content using JavaScript
-        fetch('../common/navbar.html')
+        fetch('/common/navbar.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbar-placeholder').innerHTML = data;

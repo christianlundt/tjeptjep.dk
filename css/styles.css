@@ -118,6 +118,10 @@ body {
     background-color: indianred;
 }
 
+.card-green {
+    background-color: #d6ffdb;
+}
+
 /* Add responsiveness - on screens less than 580px wide, display the cards differently */
 @media screen and (max-width: 1280px) {
     .card {
