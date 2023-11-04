@@ -95,6 +95,13 @@ body {
     font-weight: bold;
 }
 
+.card h3 {
+    margin: 10px 0;
+    padding: 15px;
+    /* Optional padding for the text */
+    font-weight: bold;
+}
+
 .card-1-3 {
     width: calc(33% - 8px);
     /* Adjusted to reduce the gap between cards */
