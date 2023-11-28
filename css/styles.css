@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -86,6 +87,7 @@ body {
     /* This ensures images maintain their aspect ratio while filling the space */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    background-color: #C6DBF0;
 }
 
 .card p {
@@ -93,6 +95,10 @@ body {
     padding: 15px;
     /* Optional padding for the text */
     font-weight: bold;
+}
+
+.card-text {
+    font-size: 55px;
 }
 
 .card h3 {
@@ -221,18 +227,10 @@ body {
 /* */
 /* */
 /* */
-/* #Tags above images */
+/* #Text variationer */
 /* */
 /* */
 
-.tags-p {
-    background-image: url('../tags/p1.png');
-    background-size: cover;
-    z-index: 101;
-}
-
-.tags-k {
-    background-image: url('../tags/k1.png');
-    background-size: cover;
-    z-index: 101;
+.text-orbitron {
+    font-family: 'Orbitron', sans-serif;
 }

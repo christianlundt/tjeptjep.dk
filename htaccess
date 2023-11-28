@@ -1,15 +1,24 @@
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^christianlundt.dk [NC]
-RewriteRule ^(.*)$ http://www.christianlundt.dk/$1 [L,R=301]
+RewriteEngine On
 
+# Redirect til www
+RewriteCond %{HTTP_HOST} ^tjeptjep\.dk [NC]
+RewriteRule ^(.*)$ http://www.tjeptjep.dk/$1 [L,R=301]
+
+# Omskrivning af .html-filer
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
 
-ErrorDocument 404 /404.html
+# Fejlsider
+ErrorDocument 403 /siden-ikke-fundet.html
+ErrorDocument 404 /siden-ikke-fundet.html
+ErrorDocument 500 /siden-ikke-fundet.html
 
+# Options og typer
 Options +Includes
 AddType text/html .shtml
 AddOutputFilter INCLUDES .shtml
 
-
+# Header
+Header set Connection keep-alive
+AddType text/cache-manifest .manifest
