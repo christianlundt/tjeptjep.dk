@@ -234,3 +234,18 @@ body {
 .text-orbitron {
     font-family: 'Orbitron', sans-serif;
 }
+
+/* */
+/* */
+/* */
+/* #AD CONTAINER */
+/* */
+/* */
+
+.ad-container {
+    margin-left: 20%;
+    margin-right: 20%;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
