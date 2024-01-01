@@ -6,10 +6,21 @@ html {
 }
 
 body {
+    background-color: #f0f0f0;
+    /* light mode background color */
+    color: #000000;
+    /* light mode text color */
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
     font-family: Poppins, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #444;
+    /* Dark gray */
+    color: #fff;
+    /* Light text color for dark background */
 }
 
 /* */
@@ -46,27 +57,29 @@ body {
     justify-content: flex-start;
 }
 
+/* Add responsiveness - on screens less than 580px wide, display the margins differently */
+@media screen and (max-width: 580px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
 .card {
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: calc(10% - 8px);
     width: calc(25% - 8px);
-    /* Adjusted to reduce the gap between cards */
     margin-right: 3px;
-    /* Reduced gap between cards */
     margin-left: 3px;
-    /* Reduced gap between cards */
     margin-top: 7px;
-    /* Reduced gap between cards */
     margin-bottom: 7px;
-    /* Reduced gap between cards */
     border: 1px solid #ccc;
-    /* Add the gray border */
     border-radius: 10px;
     text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
     transition: transform 0.2s;
-    /* Add a smooth transition for the hover effect */
     text-decoration: none;
     color: inherit;
     display: flex;
@@ -75,7 +88,15 @@ body {
 
 .card:hover {
     transform: translateY(-5px);
-    /* Move the card 5px up when hovered */
+}
+
+.dark-mode .card {
+    background-color: #333;
+    /* Another dark gray */
+    color: #fff;
+    /* Light text color for dark background */
+    border: 1px solid #000;
+    box-shadow: 0 4px 6px rgba(100, 100, 100, 0.1);
 }
 
 .card img {
@@ -123,18 +144,6 @@ body {
     /* Adjusted to reduce the gap between cards */
 }
 
-.card-blue {
-    background-color: skyblue;
-}
-
-.card-red {
-    background-color: indianred;
-}
-
-.card-green {
-    background-color: #d6ffdb;
-}
-
 /* Add responsiveness - on screens less than 580px wide, display the cards differently */
 @media screen and (max-width: 1280px) {
     .card {
@@ -168,6 +177,19 @@ body {
     align-items: center;
     margin-left: 20%;
     margin-right: 20%;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .header {
+    color: #fff;
+}
+
+/* Add responsiveness - on screens less than 580px wide, display the margins differently */
+@media screen and (max-width: 580px) {
+    .header {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
 }
 
 /* Style for the header content container, same as before */
@@ -209,12 +231,14 @@ body {
     border-radius: 5px;
     font-size: 16px;
     text-align: right;
+    transition: background-color 0.3s ease, border 0.3s ease;
 }
 
 /* Style for the search input placeholder text, same as before */
 
 #search::placeholder {
     color: #999;
+    transition: color 0.3s ease;
 }
 
 /* Style for the search input when focused, same as before */
@@ -222,6 +246,15 @@ body {
 #search:focus {
     outline: none;
     border-color: #3586ff;
+}
+
+.dark-mode #search {
+    background-color: #333;
+    border: 1px solid #333;
+}
+
+.dark-mode #search::placeholder {
+    color: #fff;
 }
 
 /* */
@@ -249,3 +282,45 @@ body {
     align-items: center;
     align-self: center;
 }
+
+/* Add responsiveness - on screens less than 580px wide, display the margins differently */
+@media screen and (max-width: 580px) {
+    .ad-container {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+/* */
+/* */
+/* #DARK MODE KNAP */
+/* */
+/* */
+
+/* Dark mode button styles */
+#dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    padding: 10px;
+    background-color: #333;
+    /* Dark mode button color */
+    color: #fff;
+    /* Dark mode button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #555;
+    /* Dark mode button color on hover */
+}
+
+.dark-mode #dark-mode-toggle {
+    background-color: #666;
+    color: #fff;
+}
+

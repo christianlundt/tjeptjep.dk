@@ -2,7 +2,7 @@ RewriteEngine On
 
 # Redirect til www
 RewriteCond %{HTTP_HOST} ^tjeptjep\.dk [NC]
-RewriteRule ^(.*)$ http://www.tjeptjep.dk/$1 [L,R=301]
+RewriteRule ^(.*)$ https://www.tjeptjep.dk/$1 [L,R=301]
 
 # Omskrivning af .html-filer
 RewriteCond %{REQUEST_FILENAME} !-d

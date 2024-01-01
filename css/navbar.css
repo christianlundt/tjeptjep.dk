@@ -4,7 +4,7 @@
     background: rgba(255, 255, 255, .25);
     padding: 50px 10px;
     /* Large padding which will shrink on scroll (using JS) */
-    transition: 0.4s;
+    transition: 0.3s;
     /* Adds a transition effect when the padding is decreased */
     position: fixed;
     /* Sticky/fixed navbar */
@@ -19,6 +19,10 @@
     margin-top: 0.25%;
 }
 
+.dark-mode #navbar {
+    background: rgba(100, 100, 100, .25);
+}
+
 .wrapper {
     display: flex;
     justify-content: center;
@@ -30,18 +34,21 @@ backdrop-filter: blur( 16px );
 -webkit-backdrop-filter: blur( 16px );
 border-radius: 10px;
 
-
 /* Style the navbar links */
 #navbar a {
     float: left;
-    color: black;
+    color: #000;
     text-align: left;
     padding: 12px;
     text-decoration: none;
     font-size: 45px;
     line-height: 25px;
     border-radius: 4px;
-    transition: 0.25s;
+    transition: 0.3s;
+}
+
+.dark-mode #navbar a {
+    color: #fff;
 }
 
 /* Style the logo */
