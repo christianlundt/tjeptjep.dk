@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const darkModeToggle = document.getElementById('dark-mode-toggle');
 
     darkModeToggle.addEventListener('click', function() {
-        console.log('Button clicked!');
         toggleDarkMode();
     });
 
