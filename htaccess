@@ -1,23 +1,14 @@
 RewriteEngine On
 
-# Redirect til www
-RewriteCond %{HTTP_HOST} ^tjeptjep\.dk [NC]
-RewriteRule ^(.*)$ https://www.tjeptjep.dk/$1 [L,R=301]
-
 # Omskrivning af .html-filer
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
 
 # Fejlsider
-ErrorDocument 403 /siden-ikke-fundet.html
-ErrorDocument 404 /siden-ikke-fundet.html
-ErrorDocument 500 /siden-ikke-fundet.html
-
-# Options og typer
-Options +Includes
-AddType text/html .shtml
-AddOutputFilter INCLUDES .shtml
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+ErrorDocument 500 /404.html
 
 # Header
 Header set Connection keep-alive
